@@ -79,7 +79,7 @@ parseExpr = parseName <|>| ( MkSExpr <$> parens (many parseExpr) )
 
 Where using `<|>` would end up in infinite recursion.
 
-For convenience, a version of `<$>` that lazily evalutes it's second argument is
+For convenience, a version of `<*>` that lazily evalutes it's second argument is
 included as `<*>|`.
 
 ### Example
